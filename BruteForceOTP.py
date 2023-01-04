@@ -18,7 +18,7 @@ def try_login(otp):
     http = urllib3.PoolManager()
     response = http.request("POST", url, fields=payload)
     # Check the response status code
-    if response.status == 201:
+    if response.status == 200:
         print("Successful login with OTP:", otp)
         exit(0)
     else:
